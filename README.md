@@ -1,6 +1,8 @@
 # Setup for On-Premise Open LLM using Text Generation Web UI
 A brief setup guide for text-generation-webui on Windows
 
+Allocate at least 60 Gb of disk space - can be more, depending on model size.
+
 # Table of Contents
 1. [Prepare Text Generation Web UI](#prepare-text-generation-web-ui)
 2. [Model preparation (Optional)](#model-preparation-optional)
@@ -14,7 +16,7 @@ $ git clone https://github.com/oobabooga/text-generation-webui
 ```
 Initially, the download size is  approximately 60 Mb.
 
-### Manual launch
+### Initial launch
 ```bash
 $ cd text-generation-webui/
 $ ./start_windows.bat
@@ -55,7 +57,6 @@ Folder size will now be approximately 10 Gb with all dependencies downloaded.
 
 ## Model preparation (optional)
 
-### Why
 Text generation Web UI supports a variety of model formats. Numerous models available on Hugging Face can be used as is, though this depends on the specific model and your hardware.
 
 In my case, I used openchat-3.5, but it exceeded the capacity of my 12 GB GPU, so I [quantize](https://huggingface.co/docs/optimum/concept_guides/quantization) it. This step is not mandatory. In fact, quantized versions of openchat-3.5 are now available on Hugging Face.
